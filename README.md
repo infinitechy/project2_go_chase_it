@@ -1,6 +1,5 @@
 # project2_go_chase_it
 
-# Project Description
 
 Summary of Tasks
 ----------------
