@@ -21,9 +21,6 @@ class DriveBot
 
             motor_command_publisher_.publish(msg_for_robot);
 
-            // Wait 3 seconds for arm to settle
-            ros::Duration(3).sleep();
-
             // Return a response message
             response1.msg_feedback = "message sent to robot";
             ROS_INFO_STREAM(response1.msg_feedback);

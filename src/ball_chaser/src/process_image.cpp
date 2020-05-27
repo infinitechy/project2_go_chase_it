@@ -26,15 +26,15 @@ class ProcessImage
             int index = std::distance(res.begin(), array_pointer);
             if(index == 0)
             {
-                drive_robot(0.3, 0.2);
+                drive_robot(0, 0.5);
             }
             else if(index == 1)
             {
-                drive_robot(0.3, 0);
+                drive_robot(0.5, 0);
             }
             else
             {
-                drive_robot(0.3, -0.2);
+                drive_robot(0.0, -0.5);
             }
         }
 
@@ -54,9 +54,12 @@ class ProcessImage
                 {
                     //in this logic, comparision is done for one value, because for the white
                     //ball R=255, G=255, B= 255
-                    auto extracted_data = img.data[i*img.step + j*3];
+                    auto extracted_data_r = img.data[i*img.step + j*3];
+                    auto extracted_data_g = img.data[i*img.step + j*3 + 1];
+                    auto extracted_data_b = img.data[i*img.step + j*3 + 2];
 
-                    if(extracted_data == white_pixel)
+                    if((extracted_data_r == white_pixel) && (extracted_data_g == white_pixel) &&
+                        (extracted_data_b == white_pixel))
                     {
                         if(j < left.second && j >= left.first)
                         {

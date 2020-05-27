@@ -43,6 +43,26 @@
     <axis xyz="0 1 0" rpy="0 0 0"/>
   </joint>
 
+    <gazebo reference="left_wheel">
+        <material>Gazebo/Green</material>
+    </gazebo>
+
+    <gazebo reference="right_wheel">
+        <material>Gazebo/Green</material>
+    </gazebo>
+
+    <gazebo reference="chassis">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <gazebo reference="camera">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="hokuyo">
+        <material>Gazebo/Gray</material>
+    </gazebo>
+
   <link name='chassis'>
     <pose>0 0 0.1 0 0 0</pose>
 
